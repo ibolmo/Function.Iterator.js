@@ -1,26 +1,24 @@
 
-
-var iter = new Function.Iterator(function(){
-	return 'a';
-}, function(){
-	return 'b';
-}, function(){
-	return 'c';
-});
-
-iter.push(function(){
-	return 'd';
-});
-
-iter.each(function(character){
-	console.log(character);
-});
-
-var iter = new Function.Iterator(function next(){
-	this.next = next;
-});
-
-iter.each(function(value, i, iter){
-	console.log(i);
-	if (i == 5) iter.stop();
+describe('Function.Iterator.js', function(){
+	
+	it('accepts any number of functions', function(){
+		
+	});
+	
+	it('throws StopIteration when there is no next function', function(){
+		
+	});
+	
+	it('can push more functions to iterate', function(){
+		
+	});
+	
+	it('can iterate through each of the functions', function(){
+		
+	});
+	
+	it('can skip, or continue, to the next iteration', function(){
+		
+	});
+	
 });
