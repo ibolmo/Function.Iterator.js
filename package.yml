@@ -1,0 +1,10 @@
+name: SVR
+author: ibolmo
+category: Utilities
+tags: [csv, tsv, reader]
+
+authors: "[Olmo Maldonado](http://ibolmo.com)"
+web: "[ibolmo.com](http://ibolmo.com)"
+description: "SVR (Separated Variable Reader)."
+license: "[MIT License](http://mootools.net/license.txt)"
+copyright: "&copy; [Olmo Maldonado](http://ibolmo.com/)"
