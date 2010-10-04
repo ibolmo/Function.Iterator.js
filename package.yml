@@ -1,10 +1,10 @@
-name: SVR
+name: Function.Iterator
 author: ibolmo
 category: Utilities
-tags: [csv, tsv, reader]
+tags: [iterator, generator]
 
 authors: "[Olmo Maldonado](http://ibolmo.com)"
 web: "[ibolmo.com](http://ibolmo.com)"
-description: "SVR (Separated Variable Reader)."
+description: "Function.Iterator. A class to help you create generators."
 license: "[MIT License](http://mootools.net/license.txt)"
 copyright: "&copy; [Olmo Maldonado](http://ibolmo.com/)"

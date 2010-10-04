@@ -1,6 +1,18 @@
 /*
 ---
 
+name: Function.Iterator
+
+description: An Iterator subclass specialized for functions.
+
+authors: Olmo Maldonado (@ibolmo)
+
+license: MIT-style license.
+
+requires: [Core/Class]
+
+provides: [Function.Iterator, StopIteration]
+
 ...
 */
 
