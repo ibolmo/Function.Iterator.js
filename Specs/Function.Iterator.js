@@ -8,7 +8,7 @@ describe('Function.Iterator.js', function(){
 		iter = new Function.Iterator(function(){}, function(){});
 		expect(iter.items.length).toBe(2);
 	});
-	
+
 	it('provides StopIteration Error object', function(){
 		new StopIteration();
 	});
@@ -29,19 +29,18 @@ describe('Function.Iterator.js', function(){
 	
 	it('can push more functions to iterate', function(){
 		var iter = new Function.Iterator();
-		iter.push(function fn(){});
+		iter.push(function(){ return 'a'; });
 		
 		expect(iter.items.length).toBe(1);
-		expect(iter.items[0]).toBe(fn);
+		expect(iter.items[0]()).toBe('a');
 		
-		iter = new Function.Iterator(function a(){});
-		iter.push(function b(){}, function c(){});
+		iter = new Function.Iterator(function(){ return 'b'; });
+		iter.push(function(){ return 'c'; }, function(){ return 'd'; });
 		
 		expect(iter.items.length).toBe(3);
-		expect(iter.items[0]).toBe(a);
-		expect(iter.items[1]).toBe(b);
-		expect(iter.items[2]).toBe(c);
-		expect(iter.items[3]).toBeNull();
+		expect(iter.items[0]()).toBe('b');
+		expect(iter.items[1]()).toBe('c');
+		expect(iter.items[2]()).toBe('d');
 	});
 	
 	it('will return the generated value, or undefined', function(){
@@ -81,5 +80,4 @@ describe('Function.Iterator.js', function(){
 	xit('can skip, or continue, to the next iteration', function(){
 		
 	});
-	
 });

@@ -18,6 +18,8 @@ provides: [Function.Iterator, StopIteration]
 
 (function(){
 
+this.StopIteration = Error;
+
 this.Function.Iterator = new Class({
 	
 	initialize: function(){
@@ -45,9 +47,9 @@ this.Function.Iterator = new Class({
 	
 	each: function(fn, bind){
 		var i = 0;
-		iter.reset();
+		this.reset();
 		try {
-			while (true) fn.call(bind, this.next(), i++, iter);
+			while (true) fn.call(bind, this.next(), i++, this);
 		} catch (StopIteration){
 		}
 	}
